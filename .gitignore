@@ -1,0 +1,5 @@
+passenger_wsgi.py
+tmp/
+app/settings.py
+.idea
+db.sqlite3
