@@ -10,6 +10,10 @@ class Cat(models.Model):
     guide = models.URLField(blank=True)
     description = models.TextField(blank=True)
 
+    class Meta:
+        verbose_name = 'chat'
+        verbose_name_plural = 'chats'
+
 '''
 class Node(models.Model):
     api_id (str)

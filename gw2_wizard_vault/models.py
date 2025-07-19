@@ -7,12 +7,15 @@ class Objective(models.Model):
     tip = models.TextField(blank=True, verbose_name="Conseil")
 
     class Meta:
-        verbose_name = 'Objectif'
-        verbose_name_plural = 'Objectifs'
+        verbose_name = 'objectif'
+        verbose_name_plural = 'objectifs'
 
     @admin.display(
         boolean=True,
         description="Conseil",
     )
     def has_tip(self):
-            return self.tip != ""
+        return self.tip != ""
+
+    def __str__(self):
+        return self.title

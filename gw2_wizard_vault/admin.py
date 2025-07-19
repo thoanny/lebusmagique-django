@@ -3,7 +3,7 @@ from .models import Objective
 
 
 class ObjectiveAdmin(admin.ModelAdmin):
-    list_display = ["api_id", "title", "has_tip"]
+    list_display = ["title", "api_id", "has_tip"]
     search_fields = ["api_id", "title"]
 
 
