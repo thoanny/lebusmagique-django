@@ -26,12 +26,38 @@ class NodeCost(models.Model):
         else:
             return(f"{self.amount} × ???")
 
+    def natural_key(self):
+        data = {
+           "id": self.id,
+           "amount": self.amount,
+           "currency": None
+        }
+
+        if self.currency:
+            data['currency'] =  {
+                "api_id": self.currency.api_id,
+                "name": self.currency.name,
+                "icon": self.currency.icon,
+            }
+
+        return data
+
 
 class NodeSource(models.Model):
     source = models.ForeignKey(Source, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return self.source.name
+
+    def natural_key(self):
+        return {
+            "id": self.id,
+            "source": {
+                "id": self.source.id,
+                "name": self.source.name,
+                "icon": self.source.icon,
+            }
+        }
 
 
 class Node(models.Model):
