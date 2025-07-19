@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'gw2',
+    'gw2_homestead',
     'gw2_wizard_vault'
 ]
 
