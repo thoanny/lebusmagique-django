@@ -17,7 +17,7 @@ class Item(models.Model):
     name = models.CharField(max_length=200, blank=True)
     rarity = models.CharField(max_length=10, choices=RARITY_CHOICES, blank=True)
     icon = models.URLField(blank=True)
-    data = models.JSONField(blank=True)
+    data = models.JSONField(blank=True, default={})
 
     class Meta:
         verbose_name = 'objet'
@@ -32,4 +32,39 @@ class Item(models.Model):
         }
 
     def __str__(self):
-        return self.name;
+        if self.name:
+            return self.name
+        else:
+            return(f"__item_{self.api_id}__")
+
+
+class Currency(models.Model):
+    api_id = models.PositiveIntegerField(unique=True)
+    name = models.CharField(max_length=200, blank=True)
+    icon = models.URLField(blank=True)
+    data = models.JSONField(blank=True, default={})
+
+    class Meta:
+        verbose_name = 'monnaie'
+        verbose_name_plural = 'monnaies'
+
+    def __str__(self):
+        if self.name:
+            return self.name
+        else:
+            return(f"__currency_{self.api_id}__")
+
+
+class Source(models.Model):
+    icon = models.URLField(blank=True)
+    name = models.CharField(max_length=200, blank=True)
+
+    class Meta:
+        verbose_name = 'source'
+        verbose_name_plural = 'sources'
+
+    def __str__(self):
+        if self.name:
+            return self.name
+        else:
+            return(f"__source_{self.id}__")
