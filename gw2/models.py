@@ -17,7 +17,7 @@ class Item(models.Model):
     name = models.CharField(max_length=200, blank=True)
     rarity = models.CharField(max_length=10, choices=RARITY_CHOICES, blank=True)
     icon = models.URLField(blank=True)
-    data = models.JSONField(blank=True, default={})
+    data = models.JSONField(blank=True, default=dict)
 
     class Meta:
         verbose_name = 'objet'
@@ -42,7 +42,7 @@ class Currency(models.Model):
     api_id = models.PositiveIntegerField(unique=True)
     name = models.CharField(max_length=200, blank=True)
     icon = models.URLField(blank=True)
-    data = models.JSONField(blank=True, default={})
+    data = models.JSONField(blank=True, default=dict)
 
     class Meta:
         verbose_name = 'monnaie'

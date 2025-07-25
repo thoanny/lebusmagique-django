@@ -5,6 +5,7 @@ from .models import Item, Currency, Source
 class ItemAdmin(admin.ModelAdmin):
     list_display = ["name", "api_id", "rarity"]
     search_fields = ["api_id", "name"]
+    ordering = ('name',)
 
 
 class CurrencyAdmin(admin.ModelAdmin):

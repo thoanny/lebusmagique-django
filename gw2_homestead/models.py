@@ -10,6 +10,7 @@ class Cat(models.Model):
     map_name = models.CharField(max_length=200, blank=True)
     guide = models.URLField(blank=True)
     description = models.TextField(blank=True)
+    icon = models.URLField(blank=True)
 
     class Meta:
         verbose_name = 'chat'
