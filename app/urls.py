@@ -16,11 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path("", include("homepage.urls")),
     path("gw2/", include("gw2.urls")),
     path("gw2/wizard-vault/", include("gw2_wizard_vault.urls")),
     path("gw2/homestead/", include("gw2_homestead.urls")),
+    path("lbm/", include("lbm.urls")),
     path('admin/', admin.site.urls, name="admin"),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

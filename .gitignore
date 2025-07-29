@@ -4,3 +4,4 @@ app/settings.py
 .idea
 db.sqlite3
 __pycache__
+uploads/

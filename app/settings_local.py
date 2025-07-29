@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'homepage',
     'gw2',
     'gw2_homestead',
-    'gw2_wizard_vault'
+    'gw2_wizard_vault',
+    'lbm'
 ]
 
 MIDDLEWARE = [
@@ -125,3 +126,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+MEDIA_URL = '/uploads/'
+MEDIA_ROOT = BASE_DIR / 'uploads'

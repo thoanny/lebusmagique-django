@@ -14,6 +14,9 @@ def index(request):
                 'objectives': reverse('gw2_wizard_vault:objective_list')
             }
         },
+        'lbm': {
+            'medias': reverse('lbm:media_list')
+        }
     }
     return HttpResponse(json.dumps(query), content_type='application/json')
 
