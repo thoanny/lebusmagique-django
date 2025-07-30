@@ -1,0 +1,25 @@
+.EasyMDEContainer {
+    width: 100%;
+
+    .CodeMirror {
+        background: var(--body-bg);
+        color: var(--body-fg);
+    }
+
+    .editor-toolbar {
+        button {
+            background: var(--body-bg);
+            border-color: var(--body-bg);
+            color: var(--body-fg);
+
+            &:hover, &.active {
+                background: var(--body-fg);
+                color: var(--body-bg);
+            }
+        }
+    }
+
+    .CodeMirror-cursor {
+        border-left-color: var(--body-fg);
+    }
+}

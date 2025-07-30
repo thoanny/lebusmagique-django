@@ -56,8 +56,8 @@ class Currency(models.Model):
 
 
 class Source(models.Model):
-    icon = models.URLField(blank=True)
     name = models.CharField(max_length=200, blank=True)
+    icon = models.URLField(blank=True)
 
     class Meta:
         verbose_name = 'source'
