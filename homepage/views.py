@@ -6,6 +6,9 @@ def index(request):
     query = {
         'admin': '/admin',
         'gw2': {
+            'guild': {
+                'decorations': reverse('gw2_guild:decoration_list')
+            },
             'homestead': {
                 'cats': reverse('gw2_homestead:cat_list'),
                 'nodes': reverse('gw2_homestead:node_list')

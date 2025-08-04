@@ -28,5 +28,8 @@ class Media(models.Model):
         self.file.delete()
         super().delete(*args, **kwargs)
 
+    def natural_key(self):
+        return self.file.url
+
     def __str__(self):
         return self.name

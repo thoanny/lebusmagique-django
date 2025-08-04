@@ -6,6 +6,7 @@ class MediaAdmin(admin.ModelAdmin):
     list_display = ('name', 'category', 'thumbnail')
     list_filter = ('category',)
     search_fields = ['name']
+    ordering = ('name',)
 
     def thumbnail(self, obj):
         if obj.file:
