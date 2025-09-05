@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'homepage',
     'gw2',
+    'gw2_fishing',
     'gw2_guild',
     'gw2_homestead',
     'gw2_wizard_vault',

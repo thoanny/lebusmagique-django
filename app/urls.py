@@ -25,6 +25,7 @@ urlpatterns = [
     path("gw2/wizard-vault/", include("gw2_wizard_vault.urls")),
     path("gw2/homestead/", include("gw2_homestead.urls")),
     path("gw2/guild/", include("gw2_guild.urls")),
+    path("gw2/fishing/", include("gw2_fishing.urls")),
     path("lbm/", include("lbm.urls")),
     path('admin/', admin.site.urls, name="admin"),
 ]

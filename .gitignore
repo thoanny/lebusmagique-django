@@ -5,3 +5,4 @@ app/settings.py
 db.sqlite3
 __pycache__
 uploads/
+venv/
