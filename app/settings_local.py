@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'gw2_fishing',
     'gw2_guild',
     'gw2_homestead',
+    'gw2_task',
     'gw2_wizard_vault',
     'lbm'
 ]

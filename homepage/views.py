@@ -17,6 +17,7 @@ def index(request):
                 'cats': reverse('gw2_homestead:cat_list'),
                 'nodes': reverse('gw2_homestead:node_list')
             },
+            'tasks' : reverse('gw2_task:task_list'),
             'wizard_vault': {
                 'objectives': reverse('gw2_wizard_vault:objective_list')
             }
