@@ -12,6 +12,8 @@ class Task(models.Model):
     period = models.CharField(max_length=10, choices=PERIODS, blank=True, verbose_name="Période")
     start_date = models.DateField(blank=True, null=True, verbose_name="Date de début")
     end_date = models.DateField(blank=True, null=True, verbose_name="Date de fin")
+    waypoint = models.CharField(max_length=25, null=True, blank=True)
+    link = models.URLField(max_length=200, null=True, blank=True)
 
     class Meta:
         verbose_name = 'tâche'
